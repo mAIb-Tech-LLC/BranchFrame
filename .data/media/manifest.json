@@ -1,0 +1,37 @@
+[
+  {
+    "name": "titanic_outcome_a.mp4",
+    "sceneId": "ttn-03a-carpathia",
+    "model": "gemini-omni-1.2-flash",
+    "bytes": 3989582,
+    "sha": "bf-sha256-85e94c755d0d73e3",
+    "latencyMs": 24500
+  },
+  {
+    "name": "titanic_outcome_b.mp4",
+    "sceneId": "ttn-03b-bulkhead",
+    "model": "gemini-omni-1.2-flash",
+    "bytes": 3605187,
+    "sha": "bf-sha256-5aaf421b9cd0caa2",
+    "latencyMs": 28774,
+    "interactionId": "v1_Chd2RGI0YXRuREw4V1prZFVQcE1EZjJBYxIXdkRiNGF0bkRMOFdaa2RVUHBNRGYyQWM"
+  },
+  {
+    "name": "last_signal_outcome_a.mp4",
+    "sceneId": "scene-03a-broadcast",
+    "model": "gemini-omni-1.2-flash",
+    "bytes": 3643865,
+    "sha": "bf-sha256-53278574e04557a5",
+    "latencyMs": 27478,
+    "interactionId": "v1_ChcxemI0YXFXM1BPWDRuc0VQcXI3djBBMBIXMXpiNGFxVzNQT1g0bnNFUHFyN3YwQTA"
+  },
+  {
+    "name": "last_signal_outcome_b.mp4",
+    "sceneId": "scene-03b-quarantine",
+    "model": "gemini-omni-1.2-flash",
+    "bytes": 3476152,
+    "sha": "bf-sha256-103f2ffb0320485e",
+    "latencyMs": 28626,
+    "interactionId": "v1_Chc5RGI0YXJ6VUtKU094TjhQMmZfYWlRdxIXOURiNGFyelVLSlNPeE44UDJmX2FpUXc"
+  }
+]

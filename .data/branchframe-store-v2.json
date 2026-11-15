@@ -1,0 +1,1633 @@
+{
+  "schemaVersion": "1.0.0",
+  "titleId": "the-last-signal",
+  "screenplayText": "TITLE: THE LAST SIGNAL\nWRITTEN BY: BRANCHFRAME ORIGINAL PRODUCTIONS\nGENRE: TECHNOLOGY THRILLER\nSETTING: MERIDIAN-9 DEEP-ORBITAL & ACOUSTIC LISTENING BUNKER — SVALBARD RIDGE\n\n[SCENE 01 — INT. MERIDIAN-9 ACOUSTIC SHIELDED BAY — 03:14 UTC]\nBlue-violet spectral lines pulse across curved optical glass. DR. ELENA VANCE (38), Chief Signal Cryptographer, isolates a narrowband 1.420 GHz carrier wave originating from the decommissioned Helios-IV relay satellite—a satellite that burned up on atmospheric re-entry eleven years ago.\n\nELENA VANCE\n(adjusting phase array)\nIt's not telemetry echo. The packet header is signed with my own cryptographic key—dated forty-eight hours from now.\n\nBehind her, DIRECTOR MARCUS THORNE (54), National Signal Directorate Overseer, steps through the biometric airlock holding a crimson physical Faraday interlock key.\n\nMARCUS THORNE\nHelios-IV is debris at the bottom of the Pacific, Elena. Whatever is spoofing that transponder is already inside our orbital clock network.\n\nELENA VANCE\nLook at the payload structure, Marcus. It's a deterministic planetary grid patch. If the solar flare hits at 03:20 UTC without this patch, every synchronous power transformer on the northern hemisphere cascades into failure.\n\n[SCENE 02 — INT. DUAL-KEY OVERRIDE CONSOLE — 03:17 UTC — CONVERGENCE & DECISION POINT]\nAlarms chime in low harmonic intervals. On the central CRT scope, the carrier wave begins a 90-second decay cycle. Two physical routing switches sit armed on the Meridian-9 console:\n- ROUTE ALPHA: Open Horizon Uplink (Broadcasts the unverified patch directly to all civil orbital relays).\n- ROUTE BETA: Faraday Cryo-Lock (Diverts and traps the anomalous signal inside Meridian-9's air-gapped cryogenic memory core, cutting off outside transmission).\n\nMARCUS THORNE\nIf that payload is a weaponized logic bomb disguised as a grid patch, broadcasting it hands the entire civil infrastructure to an unknown actor. Seal it in the cryo-core!\n\nELENA VANCE\nAnd if the telemetry warning is authentic, locking it in the vault guarantees a continental blackout in three minutes. The key is in the console. One route survives.\n\n[CANDIDATE BRANCH POINT — THE MERIDIAN OVERRIDE]\nChoice A (Open Horizon Protocol): Elena overrides Thorne's lockdown and routes the carrier wave to the global civil dish array (Scene 03A — evt:global-uplink-executed, establishing fact:signal-broadcast-globally).\nChoice B (Faraday Containment Protocol): Elena engages the blast doors and isolates the signal inside the subterranean cryogenic core (Scene 03B — evt:cryo-vault-sealed, establishing fact:signal-quarantined-in-vault).",
+  "storyDNA": {
+    "schemaVersion": "1.0.0",
+    "titleId": "the-last-signal",
+    "screenplayTitle": "THE LAST SIGNAL",
+    "logline": "When a Chief Signal Cryptographer intercepts an anomalous grid-saving patch signed with her own future cryptographic key from a dead satellite, she faces a 90-second standoff against her Directorate overseer over whether to broadcast it globally or seal it in an air-gapped vault.",
+    "characters": [
+      {
+        "id": "char:elena-vance",
+        "name": "Dr. Elena Vance",
+        "role": "Chief Signal Cryptographer",
+        "motivation": "Prevent a catastrophic northern hemisphere power grid failure during the impending 03:20 UTC solar flare by deploying the verified planetary grid patch.",
+        "initialKnowledgeFactIds": [
+          "fact:helios-decommissioned",
+          "fact:future-key-signature"
+        ],
+        "voiceProfile": "Analytical, urgent, technically precise, and resolute under extreme time pressure.",
+        "likenessProtected": true
+      },
+      {
+        "id": "char:marcus-thorne",
+        "name": "Director Marcus Thorne",
+        "role": "National Signal Directorate Overseer",
+        "motivation": "Protect national and civil orbital infrastructure from a potential weaponized logic bomb by enforcing strict air-gapped containment protocols.",
+        "initialKnowledgeFactIds": [
+          "fact:helios-decommissioned",
+          "fact:nsd-containment-protocol"
+        ],
+        "voiceProfile": "Authoritative, suspicious, command-driven, and uncompromising on security doctrine.",
+        "likenessProtected": true
+      }
+    ],
+    "canonicalFacts": [
+      {
+        "id": "fact:helios-decommissioned",
+        "statement": "The Helios-IV relay satellite was decommissioned and burned up on atmospheric re-entry eleven years prior, leaving only debris in the Pacific.",
+        "category": "world-history",
+        "immutable": true,
+        "contradictsFactIds": []
+      },
+      {
+        "id": "fact:future-key-signature",
+        "statement": "The intercepted 1.420 GHz carrier wave packet header is signed with Dr. Elena Vance's own cryptographic key dated forty-eight hours in the future.",
+        "category": "technical-anomaly",
+        "immutable": true,
+        "contradictsFactIds": []
+      },
+      {
+        "id": "fact:nsd-containment-protocol",
+        "statement": "National Signal Directorate protocol mandates isolating any unverified or spoofed orbital transponder payload inside an air-gapped Faraday cryogenic core.",
+        "category": "institutional-rule",
+        "immutable": true,
+        "contradictsFactIds": []
+      },
+      {
+        "id": "fact:Override-Console-Armed",
+        "statement": "Both physical routing switches on the Meridian-9 Dual-Key Override Console (Route Alpha Open Horizon Uplink and Route Beta Faraday Cryo-Lock) are armed during the 90-second carrier decay cycle.",
+        "category": "scene-state",
+        "immutable": false,
+        "contradictsFactIds": []
+      },
+      {
+        "id": "fact:signal-broadcast-globally",
+        "statement": "The anomalous carrier wave patch has been routed via Open Horizon Uplink and broadcast directly to all global civil orbital relays.",
+        "category": "branch-outcome",
+        "immutable": false,
+        "contradictsFactIds": [
+          "fact:signal-quarantined-in-vault"
+        ]
+      },
+      {
+        "id": "fact:signal-quarantined-in-vault",
+        "statement": "The anomalous signal has been isolated and trapped inside Meridian-9's subterranean air-gapped cryogenic memory core, cutting off all outside transmission.",
+        "category": "branch-outcome",
+        "immutable": false,
+        "contradictsFactIds": [
+          "fact:signal-broadcast-globally"
+        ]
+      }
+    ],
+    "causalEvents": [
+      {
+        "id": "evt:signal-intercepted",
+        "title": "Interception of the Future-Signed Carrier Wave",
+        "sceneId": "scene-01-arrival",
+        "timestampCode": "03:14 UTC",
+        "description": "In the Meridian-9 Acoustic Shielded Bay, Dr. Elena Vance isolates a narrowband 1.420 GHz carrier wave from the destroyed Helios-IV satellite bearing her own cryptographic signature dated 48 hours in the future and containing a planetary grid patch ahead of the 03:20 UTC solar flare.",
+        "causesEventIds": [
+          "evt:dual-key-standoff"
+        ],
+        "dependsOnEventIds": [],
+        "establishedFactIds": [
+          "fact:helios-decommissioned",
+          "fact:future-key-signature"
+        ],
+        "characterKnowledgeGained": [
+          {
+            "characterId": "char:marcus-thorne",
+            "factId": "fact:future-key-signature"
+          },
+          {
+            "characterId": "char:elena-vance",
+            "factId": "fact:nsd-containment-protocol"
+          }
+        ]
+      },
+      {
+        "id": "evt:dual-key-standoff",
+        "title": "Meridian-9 Dual-Key Override Standoff",
+        "sceneId": "scene-02-decision",
+        "timestampCode": "03:17 UTC",
+        "description": "As the carrier wave enters a 90-second decay cycle, Elena Vance and Marcus Thorne clash at the Dual-Key Override Console over whether to execute Route Alpha (Open Horizon Uplink) or Route Beta (Faraday Cryo-Lock).",
+        "causesEventIds": [
+          "evt:global-uplink-executed",
+          "evt:cryo-vault-sealed"
+        ],
+        "dependsOnEventIds": [
+          "evt:signal-intercepted"
+        ],
+        "establishedFactIds": [
+          "fact:Override-Console-Armed"
+        ],
+        "characterKnowledgeGained": []
+      },
+      {
+        "id": "evt:global-uplink-executed",
+        "title": "Open Horizon Global Uplink Executed",
+        "sceneId": "scene-03a-broadcast",
+        "timestampCode": "03:18 UTC",
+        "description": "Elena overrides Thorne's lockdown and engages Route Alpha, broadcasting the unverified carrier wave patch across the global civil dish array and orbital relays.",
+        "causesEventIds": [],
+        "dependsOnEventIds": [
+          "evt:dual-key-standoff"
+        ],
+        "establishedFactIds": [
+          "fact:signal-broadcast-globally"
+        ],
+        "characterKnowledgeGained": [
+          {
+            "characterId": "char:elena-vance",
+            "factId": "fact:signal-broadcast-globally"
+          },
+          {
+            "characterId": "char:marcus-thorne",
+            "factId": "fact:signal-broadcast-globally"
+          }
+        ]
+      },
+      {
+        "id": "evt:cryo-vault-sealed",
+        "title": "Faraday Cryo-Vault Containment Executed",
+        "sceneId": "scene-03b-quarantine",
+        "timestampCode": "03:18 UTC",
+        "description": "Elena engages Route Beta and drops the blast doors, isolating the anomalous signal inside Meridian-9's subterranean cryogenic core and severing external uplink.",
+        "causesEventIds": [],
+        "dependsOnEventIds": [
+          "evt:dual-key-standoff"
+        ],
+        "establishedFactIds": [
+          "fact:signal-quarantined-in-vault"
+        ],
+        "characterKnowledgeGained": [
+          {
+            "characterId": "char:elena-vance",
+            "factId": "fact:signal-quarantined-in-vault"
+          },
+          {
+            "characterId": "char:marcus-thorne",
+            "factId": "fact:signal-quarantined-in-vault"
+          }
+        ]
+      }
+    ],
+    "narrativeConstraints": [
+      {
+        "id": "const:exclusive-routing-outcome",
+        "rule": "In any single timeline branch, fact:signal-broadcast-globally and fact:signal-quarantined-in-vault are mutually exclusive and cannot both be true.",
+        "severity": "error",
+        "enforcedByValidator": true
+      },
+      {
+        "id": "const:helios-destruction-immutable",
+        "rule": "Helios-IV must remain physically destroyed eleven years prior; the signal cannot originate from an intact legacy satellite without temporal or spoofing anomaly.",
+        "severity": "error",
+        "enforcedByValidator": true
+      },
+      {
+        "id": "const:strict-solar-flare-window",
+        "rule": "All decision and routing actions in Scene 02 and Scene 03 must resolve within the 90-second carrier decay cycle prior to the 03:20 UTC solar flare impact.",
+        "severity": "warning",
+        "enforcedByValidator": true
+      }
+    ],
+    "candidateBranchPoints": [
+      {
+        "id": "bp-meridian-override",
+        "sceneId": "scene-02-decision",
+        "title": "The Meridian Override",
+        "dramaticQuestion": "Will Elena trust the future-signed telemetry and broadcast the unverified patch globally, or yield to Thorne's security protocol and quarantine it in the cryo-vault?",
+        "stakes": "Broadcasting a disguised logic bomb surrenders global civil infrastructure to an unknown actor, while quarantining an authentic grid patch guarantees a continental northern hemisphere blackout at 03:20 UTC.",
+        "suggestedAlternatives": [
+          "Choice A (Open Horizon Protocol): Elena overrides Thorne's lockdown and routes the carrier wave to the global civil dish array (evt:global-uplink-executed, establishing fact:signal-broadcast-globally).",
+          "Choice B (Faraday Containment Protocol): Elena engages the blast doors and isolates the signal inside the subterranean cryogenic core (evt:cryo-vault-sealed, establishing fact:signal-quarantined-in-vault)."
+        ],
+        "triggerEventId": "evt:dual-key-standoff"
+      }
+    ],
+    "compiledAt": "2026-11-14T09:21:37.408Z",
+    "compilerModel": "gemini-4-hydrogen",
+    "provenance": "LIVE_GEMINI",
+    "latencyMs": 16666
+  },
+  "rightsManifest": {
+    "schemaVersion": "1.0.0",
+    "titleId": "the-last-signal",
+    "defaultPolicy": "DENY",
+    "territories": [
+      "GLOBAL",
+      "NA",
+      "EU",
+      "APAC"
+    ],
+    "accessTier": "FREE_DEMO",
+    "updatedAt": "2026-11-14T09:25:31.508Z",
+    "grants": [
+      {
+        "id": "grant-ownership-01",
+        "scope": "ownership",
+        "subjectId": "title:the-last-signal",
+        "subjectName": "THE LAST SIGNAL (Master IP)",
+        "rightsholder": "Meridian Pictures & BranchFrame Originals LLC",
+        "decision": "ALLOW",
+        "licenseRef": "BF-OWN-2026-001",
+        "expiresAt": "2030-12-31T23:59:59.000Z",
+        "constraints": [
+          "Chain-of-title verified",
+          "Original work — zero 3P copyrighted media"
+        ]
+      },
+      {
+        "id": "grant-adaptation-02",
+        "scope": "adaptation",
+        "subjectId": "title:the-last-signal",
+        "subjectName": "THE LAST SIGNAL (Interactive Screenplay)",
+        "rightsholder": "Meridian Pictures & BranchFrame Originals LLC",
+        "decision": "ALLOW",
+        "licenseRef": "BF-ADP-2026-002",
+        "expiresAt": "2030-12-31T23:59:59.000Z",
+        "constraints": [
+          "Interactive branching permitted up to 3 decision nodes & 4 endings"
+        ]
+      },
+      {
+        "id": "grant-derivative-03",
+        "scope": "derivative_work",
+        "subjectId": "title:the-last-signal",
+        "subjectName": "THE LAST SIGNAL (Alternate Branch Endings)",
+        "rightsholder": "Meridian Pictures & BranchFrame Originals LLC",
+        "decision": "ALLOW",
+        "licenseRef": "BF-DRV-2026-003",
+        "expiresAt": "2030-12-31T23:59:59.000Z",
+        "constraints": [
+          "Requires deterministic canon validation and human sign-off prior to publish"
+        ]
+      },
+      {
+        "id": "grant-likeness-elena",
+        "scope": "likeness",
+        "subjectId": "char:elena-vance",
+        "subjectName": "Dr. Elena Vance (Lead Cryptographer)",
+        "rightsholder": "SAG-AFTRA Digital Replica Clearance #8841-A",
+        "decision": "ALLOW",
+        "licenseRef": "BF-LIK-ELENA-2026",
+        "expiresAt": "2029-06-30T23:59:59.000Z",
+        "constraints": [
+          "Authorized only for THE LAST SIGNAL canonical & approved alternate scenes"
+        ]
+      },
+      {
+        "id": "grant-voice-elena",
+        "scope": "voice",
+        "subjectId": "char:elena-vance",
+        "subjectName": "Dr. Elena Vance (Voice Synthesis)",
+        "rightsholder": "SAG-AFTRA Digital Voice Release #8841-V",
+        "decision": "ALLOW",
+        "licenseRef": "BF-VOC-ELENA-2026",
+        "expiresAt": "2029-06-30T23:59:59.000Z",
+        "constraints": [
+          "Watermarked neural telemetry voice print required"
+        ]
+      },
+      {
+        "id": "grant-likeness-marcus",
+        "scope": "likeness",
+        "subjectId": "char:marcus-thorne",
+        "subjectName": "Director Marcus Thorne (NSD Overseer)",
+        "rightsholder": "Performer Digital Likeness Rider #9012-A",
+        "decision": "ALLOW",
+        "licenseRef": "BF-LIK-MARCUS-2026",
+        "expiresAt": "2029-06-30T23:59:59.000Z",
+        "constraints": [
+          "Authorized for Meridian-9 control room and vault sequences"
+        ]
+      },
+      {
+        "id": "grant-voice-marcus",
+        "scope": "voice",
+        "subjectId": "char:marcus-thorne",
+        "subjectName": "Director Marcus Thorne (Voice Synthesis)",
+        "rightsholder": "Performer Digital Voice Rider #9012-V",
+        "decision": "ALLOW",
+        "licenseRef": "BF-VOC-MARCUS-2026",
+        "expiresAt": "2029-06-30T23:59:59.000Z",
+        "constraints": [
+          "Requires human editorial review before public playback"
+        ]
+      }
+    ]
+  },
+  "storyGraph": {
+    "schemaVersion": "1.0.0",
+    "titleId": "the-last-signal",
+    "versionNumber": 5,
+    "entrySceneId": "scene-01-arrival",
+    "publishedChoiceIds": [
+      "choice-advance-to-override",
+      "choice-open-horizon",
+      "choice-faraday-lock"
+    ],
+    "lastPublishedAt": "2026-11-14T09:34:07.915Z",
+    "approvedByHuman": "Elena Rostova (Executive Story & Rights Supervisor)",
+    "architectureCapabilities": {
+      "maxSupportedDecisions": 3,
+      "maxSupportedEndings": 4,
+      "multiTitleReady": true,
+      "deterministicRouting": true
+    },
+    "scenes": [
+      {
+        "id": "scene-01-arrival",
+        "code": "SCN-01",
+        "title": "Signal Acquisition at Meridian-9",
+        "act": "ACT_I",
+        "synopsis": "At 03:14 UTC inside the Svalbard acoustic-shielded listening bay, Dr. Elena Vance intercepts a 1.420 GHz carrier wave from the long-destroyed Helios-IV relay—signed with her own key from 48 hours in the future.",
+        "location": "INT. MERIDIAN-9 ACOUSTIC SHIELDED BAY — SVALBARD",
+        "timecode": "00:00:00 — 00:01:45",
+        "durationSec": 16,
+        "imageUrl": "/src/assets/images/last_signal_scene_1_1794641862051.jpg",
+        "mediaProvenance": "STORYBOARD_DEMO",
+        "assetHash": "bf-asset-scn01-a18f9201",
+        "audioMood": "TENSION_PULSE",
+        "charactersPresent": [
+          "char:elena-vance",
+          "char:marcus-thorne"
+        ],
+        "requiredPriorEventIds": [],
+        "requiredFactIds": [],
+        "establishesFactIds": [
+          "fact:helios-decommissioned",
+          "fact:future-key-signature"
+        ],
+        "establishesEventIds": [
+          "evt:signal-intercepted"
+        ],
+        "characterKnowledgeRequired": [
+          {
+            "characterId": "char:elena-vance",
+            "factId": "fact:future-key-signature",
+            "reason": "Elena decodes her own cryptographic signature on the carrier wave."
+          }
+        ],
+        "characterKnowledgeGained": [
+          {
+            "characterId": "char:marcus-thorne",
+            "factId": "fact:future-key-signature"
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "DR. ELENA VANCE",
+            "characterId": "char:elena-vance",
+            "line": "It is not orbital debris echo, Marcus. The packet header is signed with my private key—timestamped forty-eight hours from now.",
+            "delivery": "Focused, studying the cyan phase spectrogram",
+            "startSec": 0,
+            "endSec": 5
+          },
+          {
+            "speaker": "DIRECTOR MARCUS THORNE",
+            "characterId": "char:marcus-thorne",
+            "line": "Helios-IV burned up over the Pacific eleven years ago. Whatever is spoofing that transponder is probing our synchronous clock network.",
+            "delivery": "Stepping through the biometric airlock with the override key",
+            "startSec": 5,
+            "endSec": 11
+          },
+          {
+            "speaker": "DR. ELENA VANCE",
+            "characterId": "char:elena-vance",
+            "line": "Look at the harmonic structure. It is a phase-stabilization patch. When the coronal mass ejection hits at 03:20, every northern transformer fails without it.",
+            "delivery": "Urgent, isolating the carrier wave",
+            "startSec": 11,
+            "endSec": 16
+          }
+        ],
+        "choices": [
+          {
+            "id": "choice-advance-to-override",
+            "label": "Proceed to Override Console",
+            "subtitle": "Carrier wave decay window: 90 seconds remaining",
+            "targetSceneId": "scene-02-decision",
+            "consequenceSummary": "Arms the dual-key Meridian-9 routing terminal.",
+            "requiredRightsScopes": [
+              "ownership",
+              "adaptation"
+            ],
+            "setsFactIds": [
+              "fact:Override-Console-Armed"
+            ],
+            "isPublished": true
+          }
+        ],
+        "isEnding": false
+      },
+      {
+        "id": "scene-02-decision",
+        "code": "SCN-02",
+        "title": "The Meridian Override",
+        "act": "DECISION_POINT",
+        "synopsis": "The carrier signal enters its final 90-second decay window on the dual-key analog routing console. Director Thorne orders immediate Faraday containment, while Elena holds the uplink switch that could save—or compromise—the global grid.",
+        "location": "INT. DUAL-KEY ROUTING CONSOLE — MERIDIAN-9",
+        "timecode": "00:01:45 — 00:03:10",
+        "durationSec": 18,
+        "imageUrl": "/src/assets/images/last_signal_decision_1794641864781.jpg",
+        "mediaProvenance": "STORYBOARD_DEMO",
+        "assetHash": "bf-asset-scn02-c71b4012",
+        "audioMood": "DECISION_HEARTBEAT",
+        "charactersPresent": [
+          "char:elena-vance",
+          "char:marcus-thorne"
+        ],
+        "requiredPriorEventIds": [
+          "evt:signal-intercepted"
+        ],
+        "requiredFactIds": [
+          "fact:future-key-signature"
+        ],
+        "establishesFactIds": [
+          "fact:Override-Console-Armed"
+        ],
+        "establishesEventIds": [
+          "evt:dual-key-standoff"
+        ],
+        "characterKnowledgeRequired": [
+          {
+            "characterId": "char:marcus-thorne",
+            "factId": "fact:future-key-signature",
+            "reason": "Thorne challenges the authenticity of the future-signed packet."
+          }
+        ],
+        "characterKnowledgeGained": [
+          {
+            "characterId": "char:elena-vance",
+            "factId": "fact:nsd-containment-protocol"
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "DIRECTOR MARCUS THORNE",
+            "characterId": "char:marcus-thorne",
+            "line": "Directive 9-Omega is non-negotiable. If that payload is an adversarial logic bomb, broadcasting it hands the hemisphere to an unknown intelligence.",
+            "delivery": "Hand poised over the crimson Faraday interlock switch",
+            "startSec": 0,
+            "endSec": 6
+          },
+          {
+            "speaker": "DR. ELENA VANCE",
+            "characterId": "char:elena-vance",
+            "line": "And if we trap it in the cryo-core, the geomagnetic surge hits an unpatched grid in ninety seconds. Millions of people in the dark, Marcus.",
+            "delivery": "Fingers resting on the ivory Open Horizon uplink toggle",
+            "startSec": 6,
+            "endSec": 12
+          },
+          {
+            "speaker": "SYSTEM TELEMETRY",
+            "line": "CARRIER DECAY AT 82%. DUAL-KEY ROUTING DECISION REQUIRED: OPEN HORIZON UPLINK OR FARADAY CRYO-LOCK.",
+            "delivery": "Synthesized terminal alert",
+            "startSec": 12,
+            "endSec": 18
+          }
+        ],
+        "choices": [
+          {
+            "id": "choice-open-horizon",
+            "label": "Execute Open Horizon Broadcast",
+            "subtitle": "Route the unredacted 1.420 GHz patch to the Svalbard dish array",
+            "targetSceneId": "scene-03a-broadcast",
+            "consequenceSummary": "Transmits the future-signed stabilization code globally. Saves the hemispheric power grid, but awakens dormant orbital nodes.",
+            "requiredRightsScopes": [
+              "ownership",
+              "adaptation",
+              "derivative_work",
+              "likeness",
+              "voice"
+            ],
+            "setsFactIds": [
+              "fact:signal-broadcast-globally"
+            ],
+            "isPublished": true
+          },
+          {
+            "id": "choice-faraday-lock",
+            "label": "Engage Faraday Cryo-Containment",
+            "subtitle": "Divert the signal into the subterranean air-gapped vault and seal blast doors",
+            "targetSceneId": "scene-03b-quarantine",
+            "consequenceSummary": "Isolates the anomalous intelligence inside Meridian-9. Preserves network sovereignty as the surface grid cascades into blackout.",
+            "requiredRightsScopes": [
+              "ownership",
+              "adaptation",
+              "derivative_work",
+              "likeness",
+              "voice"
+            ],
+            "setsFactIds": [
+              "fact:signal-quarantined-in-vault"
+            ],
+            "isPublished": true
+          }
+        ],
+        "isEnding": false
+      },
+      {
+        "id": "scene-03a-broadcast",
+        "code": "SCN-03A",
+        "title": "Outcome A: Open Horizon Protocol",
+        "act": "OUTCOME_BRANCH",
+        "synopsis": "Across the mist-shrouded Svalbard ridge, giant radio telescope dishes pivot in unison toward the aurora-lit sky. The phase patch propagates worldwide seconds before the geomagnetic impact—saving the grid, while a second reply pulse echoes back from deep orbit.",
+        "location": "EXT. SVALBARD DEEP-SPACE DISH ARRAY — NIGHT",
+        "timecode": "00:03:10 — 00:05:00",
+        "durationSec": 18,
+        "imageUrl": "/api/v1/media/job-scn-03a-1794648805578.jpg",
+        "mediaProvenance": "STORYBOARD_DEMO",
+        "assetHash": "bf-sha256-49670eed5f6a91e7",
+        "audioMood": "CYAN_HORIZON",
+        "charactersPresent": [
+          "char:elena-vance",
+          "char:marcus-thorne"
+        ],
+        "requiredPriorEventIds": [
+          "evt:dual-key-standoff"
+        ],
+        "requiredFactIds": [
+          "fact:signal-broadcast-globally"
+        ],
+        "establishesFactIds": [
+          "fact:signal-broadcast-globally"
+        ],
+        "establishesEventIds": [
+          "evt:global-uplink-executed"
+        ],
+        "characterKnowledgeRequired": [
+          {
+            "characterId": "char:elena-vance",
+            "factId": "fact:future-key-signature",
+            "reason": "Elena verifies the global handshake using her key signature."
+          }
+        ],
+        "characterKnowledgeGained": [
+          {
+            "characterId": "char:elena-vance",
+            "factId": "fact:signal-broadcast-globally"
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "DR. ELENA VANCE",
+            "characterId": "char:elena-vance",
+            "line": "Uplink locked. Zürich, Montreal, and Tokyo substations just absorbed the coronal surge. Zero transformer losses.",
+            "delivery": "Watching the external ridge cameras bathe in cyan telemetry light",
+            "startSec": 0,
+            "endSec": 6
+          },
+          {
+            "speaker": "DIRECTOR MARCUS THORNE",
+            "characterId": "char:marcus-thorne",
+            "line": "Look at the dish azimuths, Elena. They did not power down after the broadcast. Every dish on the ridge just locked onto Lagrange Point 2.",
+            "delivery": "Staring at the secondary return waveform",
+            "startSec": 6,
+            "endSec": 12
+          },
+          {
+            "speaker": "DR. ELENA VANCE",
+            "characterId": "char:elena-vance",
+            "line": "The patch was only the handshake. Whatever sent it knows we are listening now.",
+            "delivery": "Quiet realization as the new carrier wave stabilizes",
+            "startSec": 12,
+            "endSec": 18
+          }
+        ],
+        "choices": [],
+        "isEnding": true,
+        "endingType": "CANON_A",
+        "endingThematicTag": "RADICAL TRANSPARENCY // THE AWAKENED RELAY"
+      },
+      {
+        "id": "scene-03b-quarantine",
+        "code": "SCN-03B",
+        "title": "Outcome B: Faraday Blackout Protocol",
+        "act": "OUTCOME_BRANCH",
+        "synopsis": "Monolithic steel blast doors thunder shut around Meridian-9’s subterranean cryogenic core, trapping the violet-and-coral signal matrix inside an air-gapped prison. Above ground, the continental grid collapses into darkness—leaving Meridian-9 as the sole surviving node.",
+        "location": "INT. SUBTERRANEAN FARADAY CRYO-VAULT — MERIDIAN-9",
+        "timecode": "00:03:10 — 00:05:00",
+        "durationSec": 18,
+        "imageUrl": "/src/assets/images/last_signal_outcome_quarantine_1794641865244.jpg",
+        "mediaProvenance": "STORYBOARD_DEMO",
+        "assetHash": "bf-sha256-7859e95c29f5668a",
+        "audioMood": "QUARANTINE_DRONE",
+        "charactersPresent": [
+          "char:elena-vance",
+          "char:marcus-thorne"
+        ],
+        "requiredPriorEventIds": [
+          "evt:dual-key-standoff"
+        ],
+        "requiredFactIds": [
+          "fact:signal-quarantined-in-vault"
+        ],
+        "establishesFactIds": [
+          "fact:signal-quarantined-in-vault"
+        ],
+        "establishesEventIds": [
+          "evt:cryo-vault-sealed"
+        ],
+        "characterKnowledgeRequired": [
+          {
+            "characterId": "char:marcus-thorne",
+            "factId": "fact:nsd-containment-protocol",
+            "reason": "Thorne executes the Directive 9-Omega cryo-lockdown."
+          }
+        ],
+        "characterKnowledgeGained": [
+          {
+            "characterId": "char:marcus-thorne",
+            "factId": "fact:signal-quarantined-in-vault"
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "DIRECTOR MARCUS THORNE",
+            "characterId": "char:marcus-thorne",
+            "line": "Blast doors sealed. Optical uplinks severed. The anomaly is trapped inside liquid helium at four Kelvin.",
+            "delivery": "Standing before the closing vault doors",
+            "startSec": 0,
+            "endSec": 6
+          },
+          {
+            "speaker": "DR. ELENA VANCE",
+            "characterId": "char:elena-vance",
+            "line": "External satellite feeds are dropping across Europe and North America. The geomagnetic surge took the unpatched grid down.",
+            "delivery": "Voice echoing in the emergency-lit bunker",
+            "startSec": 6,
+            "endSec": 12
+          },
+          {
+            "speaker": "DR. ELENA VANCE",
+            "characterId": "char:elena-vance",
+            "line": "Wait—look at the cryo-core pressure gauge. The signal is modulating the magnetic containment coils from the inside. It is trying to speak.",
+            "delivery": "Watching the violet core pulse in binary cadence",
+            "startSec": 12,
+            "endSec": 18
+          }
+        ],
+        "choices": [],
+        "isEnding": true,
+        "endingType": "ALTERNATE_B",
+        "endingThematicTag": "SOVEREIGN CONTAINMENT // THE CAPTIVE SIGNAL"
+      }
+    ]
+  },
+  "branchProposals": [
+    {
+      "schemaVersion": "1.0.0",
+      "id": "prop-1794648113150",
+      "branchPointId": "bp-meridian-override",
+      "sourceSceneId": "scene-02-decision",
+      "choiceLabel": "Engage the Quantum Mirror Loop",
+      "choiceSubtitle": "Trap the telemetry in a recursive phase-loop to strip adversarial code before tight-beam transmission",
+      "synopsis": "Refusing both Thorne's total quarantine and a blind global broadcast, Elena physically diverts the future-signed telemetry into Meridian's experimental Quantum Mirror Array. By forcing the signal into a closed relativistic phase-loop, she isolates and burns away a hidden polymorphic worm while extracting the stripped survival telemetry for a selective, encrypted burst to three deep-space relays.",
+      "endingThematicTag": "Surgical Verification",
+      "causalConsequences": [
+        "The polymorphic worm inside the telemetry detonates within the closed mirror loop, destroying sixty percent of Meridian's local optical cores instead of infecting global infrastructure.",
+        "Thorne's suspicion of an adversarial payload is validated, yet Elena proves the underlying future-signed warning is authentic.",
+        "Only three vetted orbital relay stations receive the sanitized coordinates, preventing global panic while preserving humanity's response window.",
+        "Elena surrenders her clearance badge peacefully after the burst, leaving the facility partially crippled but uncompromised."
+      ],
+      "downstreamEventChanges": [
+        {
+          "originalEventId": "evt:signal-intercepted",
+          "changeType": "MODIFIED",
+          "newDescription": "Post-loop spectral logs confirm the intercepted signal carried both genuine future telemetry and a parasitic decryption trap."
+        },
+        {
+          "originalEventId": "evt:dual-key-standoff",
+          "changeType": "MODIFIED",
+          "newDescription": "Elena bypasses the dual-key uplink console by manually pulling the optical trunk into the Quantum Mirror Array, forcing Thorne to hold fire to avoid a core breach."
+        },
+        {
+          "originalEventId": "evt:global-uplink-executed",
+          "changeType": "MODIFIED",
+          "newDescription": "The unverified global broadcast is aborted and replaced by a sanitized 4-second narrow-beam burst to three deep-space relays."
+        },
+        {
+          "originalEventId": "evt:cryo-vault-sealed",
+          "changeType": "MODIFIED",
+          "newDescription": "The cryo-vault remains unlocked; the fused glass prism of the Quantum Mirror Array becomes the permanent containment tomb for the burned-out payload."
+        }
+      ],
+      "newSceneDraft": {
+        "code": "SC-09C",
+        "title": "The Mirror Burn",
+        "location": "Meridian Sub-Level 4 - Quantum Mirror Chamber",
+        "durationSec": 18,
+        "charactersPresent": [
+          "char:elena-vance",
+          "char:marcus-thorne"
+        ],
+        "establishesFactIds": [
+          "fact:Override-Console-Armed"
+        ],
+        "dialogue": [
+          {
+            "speaker": "THORNE",
+            "characterId": "char:marcus-thorne",
+            "line": "You bypassed the dual-key bus. If that mirror chamber loses phase-lock, the worm jumps straight into the atmospheric grid.",
+            "delivery": "tense, breathing hard over the turbine whine",
+            "startSec": 0,
+            "endSec": 6
+          },
+          {
+            "speaker": "ELENA",
+            "characterId": "char:elena-vance",
+            "line": "Look at the parity waterfall on monitor two. Something is fighting the reflection. You were right about a stowaway.",
+            "delivery": "focused, eyes locked on the cascading telemetry",
+            "startSec": 6,
+            "endSec": 12
+          },
+          {
+            "speaker": "THORNE",
+            "characterId": "char:marcus-thorne",
+            "line": "Then dump the buffer into cryo. Don't try to separate toxin from blood at light speed.",
+            "delivery": "urgent, stepping toward the manual breaker",
+            "startSec": 12,
+            "endSec": 18
+          },
+          {
+            "speaker": "ELENA",
+            "characterId": "char:elena-vance",
+            "line": "Cryo buries the warning with the weapon. Raising loop gain to ninety-eight percent... wait for the thermal spike.",
+            "delivery": "calm under pressure",
+            "startSec": 18,
+            "endSec": 24
+          },
+          {
+            "speaker": "THORNE",
+            "characterId": "char:marcus-thorne",
+            "line": "The prism housing is cracking. Elena, cut the trunk!",
+            "delivery": "shouting over a sharp glass fracture",
+            "startSec": 24,
+            "endSec": 30
+          },
+          {
+            "speaker": "ELENA",
+            "characterId": "char:elena-vance",
+            "line": "There. The parasitic header just starved in the feedback shear. Clean payload isolated. Transmitting narrow-beam to Relays Alpha, Three, and Nine.",
+            "delivery": "exhaling sharply as the cyan glow fades to dark",
+            "startSec": 30,
+            "endSec": 36
+          },
+          {
+            "speaker": "THORNE",
+            "characterId": "char:marcus-thorne",
+            "line": "Sixty percent of the array is slag. Orbital Command is going to tear both of us apart for this.",
+            "delivery": "quiet, holstering his sidearm",
+            "startSec": 36,
+            "endSec": 42
+          },
+          {
+            "speaker": "ELENA",
+            "characterId": "char:elena-vance",
+            "line": "Let them. At least they'll be alive to convene the tribunal.",
+            "delivery": "steady, setting her access card on the scorched console",
+            "startSec": 42,
+            "endSec": 48
+          }
+        ],
+        "visualPrompt": "Cinematic widescreen shot inside a cold, brutalist quantum computing vault. A central hexagonal glass prism glows blinding cyan as trapped laser packets ricochet at impossible speeds. Sparks cascade from overloaded cooling conduits while Elena types frantically on a frosted emergency terminal, Thorne standing three paces behind with his weapon lowered and amber alarm strobes washing over both faces."
+      },
+      "createdAt": "2026-11-14T09:21:53.150Z",
+      "plannerModel": "gemini-4-hydrogen",
+      "provenance": "LIVE_GEMINI",
+      "latencyMs": 15734,
+      "status": "VALIDATED"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "prop-local-sandbox-01",
+      "branchPointId": "bp-meridian-override",
+      "sourceSceneId": "scene-02-decision",
+      "choiceLabel": "Isolate in Quantum Mirror Loop",
+      "choiceSubtitle": "Spoof a synthetic hemisphere grid inside Meridian-9’s local telemetry cluster",
+      "synopsis": "Instead of broadcasting blindly or locking the signal cold, Elena routes the carrier wave into a simulated regional grid twin to observe its true payload behavior in real time.",
+      "endingThematicTag": "VERIFIED SYNTHESIS // THE MIRROR PROTOCOL",
+      "causalConsequences": [
+        "Delays global transmission by 42 seconds, sacrificing outer relay substations while preserving core metropolitan grids.",
+        "Exposes a hidden telemetry return coordinate embedded inside the third harmonic layer of the Helios-IV packet.",
+        "Forces Elena and Thorne into a joint decryption alliance as the simulated twin reveals who sent the key."
+      ],
+      "downstreamEventChanges": [
+        {
+          "originalEventId": "evt:global-uplink-executed",
+          "changeType": "REPLACED",
+          "newDescription": "Replaced full dish broadcast with a targeted high-frequency burst to hardened hydro-electric nodes only."
+        },
+        {
+          "originalEventId": "evt:cryo-vault-sealed",
+          "changeType": "MODIFIED",
+          "newDescription": "Cryo-core operates as an active sandbox decrypter rather than a passive Faraday prison."
+        }
+      ],
+      "newSceneDraft": {
+        "code": "SCN-03C",
+        "title": "Outcome C: The Mirror Protocol",
+        "location": "INT. MERIDIAN-9 HOLOGRAPHIC SANDBOX CHAMBER",
+        "durationSec": 18,
+        "charactersPresent": [
+          "char:elena-vance",
+          "char:marcus-thorne"
+        ],
+        "establishesFactIds": [
+          "fact:Override-Console-Armed"
+        ],
+        "dialogue": [
+          {
+            "speaker": "DR. ELENA VANCE",
+            "characterId": "char:elena-vance",
+            "line": "The sandbox twin is absorbing the payload. Look—it stripped out the parasitic beacon and left a clean transformer patch.",
+            "startSec": 0,
+            "endSec": 8
+          },
+          {
+            "speaker": "DIRECTOR MARCUS THORNE",
+            "characterId": "char:marcus-thorne",
+            "line": "You filtered a time-shifted transmission in forty seconds. Route the sanitized patch to the primary relays now!",
+            "startSec": 8,
+            "endSec": 18
+          }
+        ],
+        "visualPrompt": "Cinematic thriller shot of a subterranean telemetry chamber illuminated by dual cyan and violet holographic grid projections, two protagonists inspecting a sanitized waveform, 35mm film grain."
+      },
+      "createdAt": "2026-11-14T00:05:00.000Z",
+      "plannerModel": "gemini-4-hydrogen",
+      "provenance": "SEED_FIXTURE",
+      "status": "VALIDATED"
+    }
+  ],
+  "generationJobs": [
+    {
+      "id": "job-scn-03a-1794648805578",
+      "titleId": "the-last-signal",
+      "sceneId": "scene-03a-broadcast",
+      "sceneTitle": "Outcome A: Open Horizon Protocol",
+      "adapterType": "FLASH_IMAGE_KEYFRAME",
+      "modelName": "gemini-3.1-flash-lite-image",
+      "prompt": "Animate this exact 35mm technology thriller frame: giant deep-space radio telescope dishes on a mist-shrouded Svalbard mountain ridge at night slowly pivot in unison toward the aurora-tinted horizon as cool cyan telemetry beacons pulse across the dish array, atmospheric fog drifting past the steel towers, cinematic anamorphic camera drift.",
+      "aspectRatio": "16:9",
+      "durationSec": 5,
+      "rightsCheck": {
+        "allowed": true,
+        "decision": "ALLOW",
+        "operation": "GENERATE_FOOTAGE",
+        "evaluatedScopes": [
+          {
+            "scope": "ownership",
+            "subjectId": "title:the-last-signal",
+            "subjectName": "THE LAST SIGNAL (Master IP)",
+            "decision": "ALLOW",
+            "reason": "Verified via BF-OWN-2026-001 (Meridian Pictures & BranchFrame Originals LLC)."
+          },
+          {
+            "scope": "adaptation",
+            "subjectId": "title:the-last-signal",
+            "subjectName": "THE LAST SIGNAL (Interactive Screenplay)",
+            "decision": "ALLOW",
+            "reason": "Verified via BF-ADP-2026-002 (Meridian Pictures & BranchFrame Originals LLC)."
+          },
+          {
+            "scope": "derivative_work",
+            "subjectId": "title:the-last-signal",
+            "subjectName": "THE LAST SIGNAL (Alternate Branch Endings)",
+            "decision": "ALLOW",
+            "reason": "Verified via BF-DRV-2026-003 (Meridian Pictures & BranchFrame Originals LLC)."
+          },
+          {
+            "scope": "likeness",
+            "subjectId": "char:elena-vance",
+            "subjectName": "Dr. Elena Vance (Lead Cryptographer)",
+            "decision": "ALLOW",
+            "reason": "Cleared via BF-LIK-ELENA-2026 (SAG-AFTRA Digital Replica Clearance #8841-A)."
+          },
+          {
+            "scope": "voice",
+            "subjectId": "char:elena-vance",
+            "subjectName": "Dr. Elena Vance (Voice Synthesis)",
+            "decision": "ALLOW",
+            "reason": "Cleared via BF-VOC-ELENA-2026 (SAG-AFTRA Digital Voice Release #8841-V)."
+          },
+          {
+            "scope": "likeness",
+            "subjectId": "char:marcus-thorne",
+            "subjectName": "Director Marcus Thorne (NSD Overseer)",
+            "decision": "ALLOW",
+            "reason": "Cleared via BF-LIK-MARCUS-2026 (Performer Digital Likeness Rider #9012-A)."
+          },
+          {
+            "scope": "voice",
+            "subjectId": "char:marcus-thorne",
+            "subjectName": "Director Marcus Thorne (Voice Synthesis)",
+            "decision": "ALLOW",
+            "reason": "Cleared via BF-VOC-MARCUS-2026 (Performer Digital Voice Rider #9012-V)."
+          }
+        ],
+        "deniedReasons": [],
+        "auditHash": "bf-audit-8e901968",
+        "evaluatedAt": "2026-11-14T09:33:25.578Z"
+      },
+      "modelAvailable": true,
+      "availabilityNote": "Generated 16:9 keyframe plate via gemini-3.1-flash-lite-image. Held in PENDING_HUMAN_REVIEW.",
+      "provenance": "LIVE_FLASH_IMAGE",
+      "assetVersion": 4,
+      "assetHash": "bf-sha256-49670eed5f6a91e7",
+      "latencyMs": 3165,
+      "status": "APPROVED",
+      "outputUrl": "/api/v1/media/job-scn-03a-1794648805578.jpg",
+      "outputMimeType": "image/jpeg",
+      "createdAt": "2026-11-14T09:33:28.743Z",
+      "reviewerName": "Elena Rostova — Supervising Editor",
+      "reviewedAt": "2026-11-14T09:33:28.755Z",
+      "reviewNotes": "Approved live Gemini 3.1 Flash Lite Image keyframe."
+    },
+    {
+      "id": "job-scn-03b-1794648692623",
+      "titleId": "the-last-signal",
+      "sceneId": "scene-03b-quarantine",
+      "sceneTitle": "Outcome B: Faraday Blackout Protocol",
+      "adapterType": "OMNI_FLASH_VIDEO",
+      "modelName": "gemini-omni-1.2-flash",
+      "prompt": "Animate this exact 35mm technology thriller frame: inside a subterranean concrete Faraday vault, monolithic dark steel blast doors slowly close around a glowing violet-and-coral cryogenic memory core while emergency indicator lights pulse on the damp industrial walls, tense atmospheric camera push-in.",
+      "aspectRatio": "16:9",
+      "durationSec": 5,
+      "rightsCheck": {
+        "allowed": true,
+        "decision": "ALLOW",
+        "operation": "GENERATE_FOOTAGE",
+        "evaluatedScopes": [
+          {
+            "scope": "ownership",
+            "subjectId": "title:the-last-signal",
+            "subjectName": "THE LAST SIGNAL (Master IP)",
+            "decision": "ALLOW",
+            "reason": "Verified via BF-OWN-2026-001 (Meridian Pictures & BranchFrame Originals LLC)."
+          },
+          {
+            "scope": "adaptation",
+            "subjectId": "title:the-last-signal",
+            "subjectName": "THE LAST SIGNAL (Interactive Screenplay)",
+            "decision": "ALLOW",
+            "reason": "Verified via BF-ADP-2026-002 (Meridian Pictures & BranchFrame Originals LLC)."
+          },
+          {
+            "scope": "derivative_work",
+            "subjectId": "title:the-last-signal",
+            "subjectName": "THE LAST SIGNAL (Alternate Branch Endings)",
+            "decision": "ALLOW",
+            "reason": "Verified via BF-DRV-2026-003 (Meridian Pictures & BranchFrame Originals LLC)."
+          },
+          {
+            "scope": "likeness",
+            "subjectId": "char:elena-vance",
+            "subjectName": "Dr. Elena Vance (Lead Cryptographer)",
+            "decision": "ALLOW",
+            "reason": "Cleared via BF-LIK-ELENA-2026 (SAG-AFTRA Digital Replica Clearance #8841-A)."
+          },
+          {
+            "scope": "voice",
+            "subjectId": "char:elena-vance",
+            "subjectName": "Dr. Elena Vance (Voice Synthesis)",
+            "decision": "ALLOW",
+            "reason": "Cleared via BF-VOC-ELENA-2026 (SAG-AFTRA Digital Voice Release #8841-V)."
+          },
+          {
+            "scope": "likeness",
+            "subjectId": "char:marcus-thorne",
+            "subjectName": "Director Marcus Thorne (NSD Overseer)",
+            "decision": "ALLOW",
+            "reason": "Cleared via BF-LIK-MARCUS-2026 (Performer Digital Likeness Rider #9012-A)."
+          },
+          {
+            "scope": "voice",
+            "subjectId": "char:marcus-thorne",
+            "subjectName": "Director Marcus Thorne (Voice Synthesis)",
+            "decision": "ALLOW",
+            "reason": "Cleared via BF-VOC-MARCUS-2026 (Performer Digital Voice Rider #9012-V)."
+          }
+        ],
+        "deniedReasons": [],
+        "auditHash": "bf-audit-8e901968",
+        "evaluatedAt": "2026-11-14T09:31:32.622Z"
+      },
+      "modelAvailable": true,
+      "availabilityNote": "STORYBOARD DEMO FALLBACK (gemini-omni-1.2-flash): 404 Model 'gemini-omni-1.2-flash' not found. Please verify the model name against the supported list: https://ai.google.dev/gemini-api/docs/models. Preserved approved still keyframe plate for review.",
+      "provenance": "STORYBOARD_DEMO_FALLBACK",
+      "assetVersion": 3,
+      "assetHash": "bf-sha256-36421c2564ab9c3d",
+      "latencyMs": 183,
+      "status": "APPROVED",
+      "outputUrl": "/src/assets/images/last_signal_outcome_quarantine_1794641865244.jpg",
+      "outputMimeType": "image/jpeg",
+      "createdAt": "2026-11-14T09:31:32.805Z",
+      "reviewerName": "Elena Rostova — Supervising Editor",
+      "reviewedAt": "2026-11-14T09:32:22.768Z",
+      "reviewNotes": "Approved verified plate with Rights-as-Code clearance for canonical branch playback."
+    },
+    {
+      "id": "job-scn-03a-1794648692391",
+      "titleId": "the-last-signal",
+      "sceneId": "scene-03a-broadcast",
+      "sceneTitle": "Outcome A: Open Horizon Protocol",
+      "adapterType": "OMNI_FLASH_VIDEO",
+      "modelName": "gemini-omni-1.2-flash",
+      "prompt": "Animate this exact 35mm technology thriller frame: giant deep-space radio telescope dishes on a mist-shrouded Svalbard mountain ridge at night slowly pivot in unison toward the aurora-tinted horizon as cool cyan telemetry beacons pulse across the dish array, atmospheric fog drifting past the steel towers, cinematic anamorphic camera drift.",
+      "aspectRatio": "16:9",
+      "durationSec": 5,
+      "rightsCheck": {
+        "allowed": true,
+        "decision": "ALLOW",
+        "operation": "GENERATE_FOOTAGE",
+        "evaluatedScopes": [
+          {
+            "scope": "ownership",
+            "subjectId": "title:the-last-signal",
+            "subjectName": "THE LAST SIGNAL (Master IP)",
+            "decision": "ALLOW",
+            "reason": "Verified via BF-OWN-2026-001 (Meridian Pictures & BranchFrame Originals LLC)."
+          },
+          {
+            "scope": "adaptation",
+            "subjectId": "title:the-last-signal",
+            "subjectName": "THE LAST SIGNAL (Interactive Screenplay)",
+            "decision": "ALLOW",
+            "reason": "Verified via BF-ADP-2026-002 (Meridian Pictures & BranchFrame Originals LLC)."
+          },
+          {
+            "scope": "derivative_work",
+            "subjectId": "title:the-last-signal",
+            "subjectName": "THE LAST SIGNAL (Alternate Branch Endings)",
+            "decision": "ALLOW",
+            "reason": "Verified via BF-DRV-2026-003 (Meridian Pictures & BranchFrame Originals LLC)."
+          },
+          {
+            "scope": "likeness",
+            "subjectId": "char:elena-vance",
+            "subjectName": "Dr. Elena Vance (Lead Cryptographer)",
+            "decision": "ALLOW",
+            "reason": "Cleared via BF-LIK-ELENA-2026 (SAG-AFTRA Digital Replica Clearance #8841-A)."
+          },
+          {
+            "scope": "voice",
+            "subjectId": "char:elena-vance",
+            "subjectName": "Dr. Elena Vance (Voice Synthesis)",
+            "decision": "ALLOW",
+            "reason": "Cleared via BF-VOC-ELENA-2026 (SAG-AFTRA Digital Voice Release #8841-V)."
+          },
+          {
+            "scope": "likeness",
+            "subjectId": "char:marcus-thorne",
+            "subjectName": "Director Marcus Thorne (NSD Overseer)",
+            "decision": "ALLOW",
+            "reason": "Cleared via BF-LIK-MARCUS-2026 (Performer Digital Likeness Rider #9012-A)."
+          },
+          {
+            "scope": "voice",
+            "subjectId": "char:marcus-thorne",
+            "subjectName": "Director Marcus Thorne (Voice Synthesis)",
+            "decision": "ALLOW",
+            "reason": "Cleared via BF-VOC-MARCUS-2026 (Performer Digital Voice Rider #9012-V)."
+          }
+        ],
+        "deniedReasons": [],
+        "auditHash": "bf-audit-8e901968",
+        "evaluatedAt": "2026-11-14T09:31:32.390Z"
+      },
+      "modelAvailable": true,
+      "availabilityNote": "STORYBOARD DEMO FALLBACK (gemini-omni-1.2-flash): 404 Model 'gemini-omni-1.2-flash' not found. Please verify the model name against the supported list: https://ai.google.dev/gemini-api/docs/models. Preserved approved still keyframe plate for review.",
+      "provenance": "STORYBOARD_DEMO_FALLBACK",
+      "assetVersion": 3,
+      "assetHash": "bf-sha256-48cc0822a10b4b74",
+      "latencyMs": 224,
+      "status": "APPROVED",
+      "outputUrl": "/src/assets/images/last_signal_outcome_broadcast_1794641865584.jpg",
+      "outputMimeType": "image/jpeg",
+      "createdAt": "2026-11-14T09:31:32.614Z",
+      "reviewerName": "Elena Rostova — Supervising Editor",
+      "reviewedAt": "2026-11-14T09:32:22.776Z",
+      "reviewNotes": "Approved verified plate with Rights-as-Code clearance for canonical branch playback."
+    },
+    {
+      "id": "job-scn-03b-1794648331591",
+      "titleId": "the-last-signal",
+      "sceneId": "scene-03b-quarantine",
+      "sceneTitle": "Outcome B: Faraday Blackout Protocol",
+      "adapterType": "OMNI_FLASH_VIDEO",
+      "modelName": "gemini-omni-1.2-flash",
+      "prompt": "Anamorphic 2.39:1 sci-fi thriller motion shot: Director Marcus Thorne engages the Faraday Blackout Protocol in the Meridian-9 bunker as heavy blast shutters seal the cryogenic optical vault under crimson emergency beacons.",
+      "aspectRatio": "16:9",
+      "durationSec": 5,
+      "rightsCheck": {
+        "allowed": true,
+        "decision": "ALLOW",
+        "operation": "GENERATE_FOOTAGE",
+        "evaluatedScopes": [
+          {
+            "scope": "ownership",
+            "subjectId": "title:the-last-signal",
+            "subjectName": "THE LAST SIGNAL (Master IP)",
+            "decision": "ALLOW",
+            "reason": "Verified via BF-OWN-2026-001 (Meridian Pictures & BranchFrame Originals LLC)."
+          },
+          {
+            "scope": "adaptation",
+            "subjectId": "title:the-last-signal",
+            "subjectName": "THE LAST SIGNAL (Interactive Screenplay)",
+            "decision": "ALLOW",
+            "reason": "Verified via BF-ADP-2026-002 (Meridian Pictures & BranchFrame Originals LLC)."
+          },
+          {
+            "scope": "derivative_work",
+            "subjectId": "title:the-last-signal",
+            "subjectName": "THE LAST SIGNAL (Alternate Branch Endings)",
+            "decision": "ALLOW",
+            "reason": "Verified via BF-DRV-2026-003 (Meridian Pictures & BranchFrame Originals LLC)."
+          },
+          {
+            "scope": "likeness",
+            "subjectId": "char:elena-vance",
+            "subjectName": "Dr. Elena Vance (Lead Cryptographer)",
+            "decision": "ALLOW",
+            "reason": "Cleared via BF-LIK-ELENA-2026 (SAG-AFTRA Digital Replica Clearance #8841-A)."
+          },
+          {
+            "scope": "voice",
+            "subjectId": "char:elena-vance",
+            "subjectName": "Dr. Elena Vance (Voice Synthesis)",
+            "decision": "ALLOW",
+            "reason": "Cleared via BF-VOC-ELENA-2026 (SAG-AFTRA Digital Voice Release #8841-V)."
+          },
+          {
+            "scope": "likeness",
+            "subjectId": "char:marcus-thorne",
+            "subjectName": "Director Marcus Thorne (NSD Overseer)",
+            "decision": "ALLOW",
+            "reason": "Cleared via BF-LIK-MARCUS-2026 (Performer Digital Likeness Rider #9012-A)."
+          },
+          {
+            "scope": "voice",
+            "subjectId": "char:marcus-thorne",
+            "subjectName": "Director Marcus Thorne (Voice Synthesis)",
+            "decision": "ALLOW",
+            "reason": "Cleared via BF-VOC-MARCUS-2026 (Performer Digital Voice Rider #9012-V)."
+          }
+        ],
+        "deniedReasons": [],
+        "auditHash": "bf-audit-8e901968",
+        "evaluatedAt": "2026-11-14T09:25:31.591Z"
+      },
+      "modelAvailable": false,
+      "availabilityNote": "STORYBOARD DEMO FALLBACK (gemini-omni-1.2-flash): {\"error\":{\"code\":404,\"message\":\"Model is not found: models/gemini-omni-1.2-flash for api version v1\",\"status\":\"NOT_FOUND\"}}. Preserved approved still keyframe plate for review.",
+      "provenance": "STORYBOARD_DEMO_FALLBACK",
+      "assetVersion": 2,
+      "assetHash": "bf-sha256-7859e95c29f5668a",
+      "latencyMs": 64,
+      "status": "APPROVED",
+      "outputUrl": "/src/assets/images/last_signal_outcome_quarantine_1794641865244.jpg",
+      "outputMimeType": "image/jpeg",
+      "createdAt": "2026-11-14T09:25:31.655Z",
+      "reviewerName": "Elena Rostova — Supervising Editor",
+      "reviewedAt": "2026-11-14T09:32:22.782Z",
+      "reviewNotes": "Approved verified plate with Rights-as-Code clearance for canonical branch playback."
+    },
+    {
+      "id": "job-scn-03a-1794648331515",
+      "titleId": "the-last-signal",
+      "sceneId": "scene-03a-broadcast",
+      "sceneTitle": "Outcome A: Open Horizon Protocol",
+      "adapterType": "OMNI_FLASH_VIDEO",
+      "modelName": "gemini-omni-1.2-flash",
+      "prompt": "Anamorphic 2.39:1 sci-fi thriller motion shot: Dr. Elena Rostova turns the dual-key override in the subterranean Meridian-9 control room as cyan telemetry streams erupt across glass consoles and the deep-sea dish arrays align to broadcast the signal.",
+      "aspectRatio": "16:9",
+      "durationSec": 5,
+      "rightsCheck": {
+        "allowed": true,
+        "decision": "ALLOW",
+        "operation": "GENERATE_FOOTAGE",
+        "evaluatedScopes": [
+          {
+            "scope": "ownership",
+            "subjectId": "title:the-last-signal",
+            "subjectName": "THE LAST SIGNAL (Master IP)",
+            "decision": "ALLOW",
+            "reason": "Verified via BF-OWN-2026-001 (Meridian Pictures & BranchFrame Originals LLC)."
+          },
+          {
+            "scope": "adaptation",
+            "subjectId": "title:the-last-signal",
+            "subjectName": "THE LAST SIGNAL (Interactive Screenplay)",
+            "decision": "ALLOW",
+            "reason": "Verified via BF-ADP-2026-002 (Meridian Pictures & BranchFrame Originals LLC)."
+          },
+          {
+            "scope": "derivative_work",
+            "subjectId": "title:the-last-signal",
+            "subjectName": "THE LAST SIGNAL (Alternate Branch Endings)",
+            "decision": "ALLOW",
+            "reason": "Verified via BF-DRV-2026-003 (Meridian Pictures & BranchFrame Originals LLC)."
+          },
+          {
+            "scope": "likeness",
+            "subjectId": "char:elena-vance",
+            "subjectName": "Dr. Elena Vance (Lead Cryptographer)",
+            "decision": "ALLOW",
+            "reason": "Cleared via BF-LIK-ELENA-2026 (SAG-AFTRA Digital Replica Clearance #8841-A)."
+          },
+          {
+            "scope": "voice",
+            "subjectId": "char:elena-vance",
+            "subjectName": "Dr. Elena Vance (Voice Synthesis)",
+            "decision": "ALLOW",
+            "reason": "Cleared via BF-VOC-ELENA-2026 (SAG-AFTRA Digital Voice Release #8841-V)."
+          },
+          {
+            "scope": "likeness",
+            "subjectId": "char:marcus-thorne",
+            "subjectName": "Director Marcus Thorne (NSD Overseer)",
+            "decision": "ALLOW",
+            "reason": "Cleared via BF-LIK-MARCUS-2026 (Performer Digital Likeness Rider #9012-A)."
+          },
+          {
+            "scope": "voice",
+            "subjectId": "char:marcus-thorne",
+            "subjectName": "Director Marcus Thorne (Voice Synthesis)",
+            "decision": "ALLOW",
+            "reason": "Cleared via BF-VOC-MARCUS-2026 (Performer Digital Voice Rider #9012-V)."
+          }
+        ],
+        "deniedReasons": [],
+        "auditHash": "bf-audit-8e901968",
+        "evaluatedAt": "2026-11-14T09:25:31.515Z"
+      },
+      "modelAvailable": false,
+      "availabilityNote": "STORYBOARD DEMO FALLBACK (gemini-omni-1.2-flash): {\"error\":{\"code\":404,\"message\":\"Model is not found: models/gemini-omni-1.2-flash for api version v1\",\"status\":\"NOT_FOUND\"}}. Preserved approved still keyframe plate for review.",
+      "provenance": "STORYBOARD_DEMO_FALLBACK",
+      "assetVersion": 2,
+      "assetHash": "bf-sha256-fcf80065df0b620f",
+      "latencyMs": 70,
+      "status": "APPROVED",
+      "outputUrl": "/src/assets/images/last_signal_outcome_broadcast_1794641865584.jpg",
+      "outputMimeType": "image/jpeg",
+      "createdAt": "2026-11-14T09:25:31.585Z",
+      "reviewerName": "Elena Rostova — Supervising Editor",
+      "reviewedAt": "2026-11-14T09:32:22.789Z",
+      "reviewNotes": "Approved verified plate with Rights-as-Code clearance for canonical branch playback."
+    },
+    {
+      "id": "job-scn03a-keyframe",
+      "titleId": "the-last-signal",
+      "sceneId": "scene-03a-broadcast",
+      "sceneTitle": "Outcome A: Open Horizon Protocol",
+      "adapterType": "OMNI_FLASH_VIDEO",
+      "modelName": "gemini-omni-1.2-flash",
+      "prompt": "Cinematic wide shot of giant deep-space radio telescope dishes on a mist-shrouded mountain ridge at night, bathed in cool cyan and soft ivory light as synchronized dishes pivot toward the horizon, 35mm anamorphic film aesthetic.",
+      "aspectRatio": "16:9",
+      "durationSec": 5,
+      "rightsCheck": {
+        "allowed": true,
+        "decision": "ALLOW",
+        "operation": "GENERATE_FOOTAGE",
+        "evaluatedScopes": [
+          {
+            "scope": "ownership",
+            "subjectId": "title:the-last-signal",
+            "subjectName": "THE LAST SIGNAL (Master IP)",
+            "decision": "ALLOW",
+            "reason": "Verified via BF-OWN-2026-001 (Meridian Pictures & BranchFrame Originals LLC)."
+          },
+          {
+            "scope": "adaptation",
+            "subjectId": "title:the-last-signal",
+            "subjectName": "THE LAST SIGNAL (Interactive Screenplay)",
+            "decision": "ALLOW",
+            "reason": "Verified via BF-ADP-2026-002 (Meridian Pictures & BranchFrame Originals LLC)."
+          },
+          {
+            "scope": "derivative_work",
+            "subjectId": "title:the-last-signal",
+            "subjectName": "THE LAST SIGNAL (Alternate Branch Endings)",
+            "decision": "ALLOW",
+            "reason": "Verified via BF-DRV-2026-003 (Meridian Pictures & BranchFrame Originals LLC)."
+          },
+          {
+            "scope": "likeness",
+            "subjectId": "char:elena-vance",
+            "subjectName": "Dr. Elena Vance (Lead Cryptographer)",
+            "decision": "ALLOW",
+            "reason": "Cleared via BF-LIK-ELENA-2026 (SAG-AFTRA Digital Replica Clearance #8841-A)."
+          },
+          {
+            "scope": "voice",
+            "subjectId": "char:elena-vance",
+            "subjectName": "Dr. Elena Vance (Voice Synthesis)",
+            "decision": "ALLOW",
+            "reason": "Cleared via BF-VOC-ELENA-2026 (SAG-AFTRA Digital Voice Release #8841-V)."
+          },
+          {
+            "scope": "likeness",
+            "subjectId": "char:marcus-thorne",
+            "subjectName": "Director Marcus Thorne (NSD Overseer)",
+            "decision": "ALLOW",
+            "reason": "Cleared via BF-LIK-MARCUS-2026 (Performer Digital Likeness Rider #9012-A)."
+          },
+          {
+            "scope": "voice",
+            "subjectId": "char:marcus-thorne",
+            "subjectName": "Director Marcus Thorne (Voice Synthesis)",
+            "decision": "ALLOW",
+            "reason": "Cleared via BF-VOC-MARCUS-2026 (Performer Digital Voice Rider #9012-V)."
+          }
+        ],
+        "deniedReasons": [],
+        "auditHash": "bf-audit-8e901968",
+        "evaluatedAt": "2026-11-14T00:05:00.000Z"
+      },
+      "modelAvailable": true,
+      "availabilityNote": "Initial approved storyboard reference keyframe. Ready for live Gemini Omni 1.2 Flash motion-video synthesis.",
+      "provenance": "STORYBOARD_DEMO_FALLBACK",
+      "assetVersion": 1,
+      "assetHash": "bf-asset-scn03a-e82c9104",
+      "status": "APPROVED",
+      "outputUrl": "/src/assets/images/last_signal_outcome_broadcast_1794641865584.jpg",
+      "outputMimeType": "image/jpeg",
+      "reviewerName": "Elena Rostova (Supervising Editor)",
+      "reviewedAt": "2026-11-14T00:10:00.000Z",
+      "reviewNotes": "Approved reference plate for canonical Outcome A playback.",
+      "createdAt": "2026-11-14T00:05:00.000Z"
+    },
+    {
+      "id": "job-scn03b-keyframe",
+      "titleId": "the-last-signal",
+      "sceneId": "scene-03b-quarantine",
+      "sceneTitle": "Outcome B: Faraday Blackout Protocol",
+      "adapterType": "OMNI_FLASH_VIDEO",
+      "modelName": "gemini-omni-1.2-flash",
+      "prompt": "Cinematic architectural wide shot of a subterranean Faraday vault with monolithic dark steel blast doors closing around a glowing violet-and-coral cryogenic memory core, stark geometric shadows, 35mm film grain.",
+      "aspectRatio": "16:9",
+      "durationSec": 5,
+      "rightsCheck": {
+        "allowed": true,
+        "decision": "ALLOW",
+        "operation": "GENERATE_FOOTAGE",
+        "evaluatedScopes": [
+          {
+            "scope": "ownership",
+            "subjectId": "title:the-last-signal",
+            "subjectName": "THE LAST SIGNAL (Master IP)",
+            "decision": "ALLOW",
+            "reason": "Verified via BF-OWN-2026-001 (Meridian Pictures & BranchFrame Originals LLC)."
+          },
+          {
+            "scope": "adaptation",
+            "subjectId": "title:the-last-signal",
+            "subjectName": "THE LAST SIGNAL (Interactive Screenplay)",
+            "decision": "ALLOW",
+            "reason": "Verified via BF-ADP-2026-002 (Meridian Pictures & BranchFrame Originals LLC)."
+          },
+          {
+            "scope": "derivative_work",
+            "subjectId": "title:the-last-signal",
+            "subjectName": "THE LAST SIGNAL (Alternate Branch Endings)",
+            "decision": "ALLOW",
+            "reason": "Verified via BF-DRV-2026-003 (Meridian Pictures & BranchFrame Originals LLC)."
+          },
+          {
+            "scope": "likeness",
+            "subjectId": "char:elena-vance",
+            "subjectName": "Dr. Elena Vance (Lead Cryptographer)",
+            "decision": "ALLOW",
+            "reason": "Cleared via BF-LIK-ELENA-2026 (SAG-AFTRA Digital Replica Clearance #8841-A)."
+          },
+          {
+            "scope": "voice",
+            "subjectId": "char:elena-vance",
+            "subjectName": "Dr. Elena Vance (Voice Synthesis)",
+            "decision": "ALLOW",
+            "reason": "Cleared via BF-VOC-ELENA-2026 (SAG-AFTRA Digital Voice Release #8841-V)."
+          },
+          {
+            "scope": "likeness",
+            "subjectId": "char:marcus-thorne",
+            "subjectName": "Director Marcus Thorne (NSD Overseer)",
+            "decision": "ALLOW",
+            "reason": "Cleared via BF-LIK-MARCUS-2026 (Performer Digital Likeness Rider #9012-A)."
+          },
+          {
+            "scope": "voice",
+            "subjectId": "char:marcus-thorne",
+            "subjectName": "Director Marcus Thorne (Voice Synthesis)",
+            "decision": "ALLOW",
+            "reason": "Cleared via BF-VOC-MARCUS-2026 (Performer Digital Voice Rider #9012-V)."
+          }
+        ],
+        "deniedReasons": [],
+        "auditHash": "bf-audit-8e901968",
+        "evaluatedAt": "2026-11-14T00:06:00.000Z"
+      },
+      "modelAvailable": true,
+      "availabilityNote": "Initial approved storyboard reference keyframe. Ready for live Gemini Omni 1.2 Flash motion-video synthesis.",
+      "provenance": "STORYBOARD_DEMO_FALLBACK",
+      "assetVersion": 1,
+      "assetHash": "bf-asset-scn03b-f09d3381",
+      "status": "APPROVED",
+      "outputUrl": "/src/assets/images/last_signal_outcome_quarantine_1794641865244.jpg",
+      "outputMimeType": "image/jpeg",
+      "reviewerName": "Elena Rostova (Supervising Editor)",
+      "reviewedAt": "2026-11-14T00:12:00.000Z",
+      "reviewNotes": "Approved reference plate for Outcome B playback.",
+      "createdAt": "2026-11-14T00:06:00.000Z"
+    }
+  ],
+  "publicationRecords": [
+    {
+      "id": "pub-v5-1794648847915",
+      "titleId": "the-last-signal",
+      "versionNumber": 5,
+      "approvedBy": "Elena Rostova",
+      "role": "Executive Story & Rights Supervisor",
+      "notes": "Mission 02 E2E verified release with Live Gemini 4 Hydrogen Story DNA & Branch Planner + Live Gemini 3.1 Flash Lite Image Keyframe + Storyboard Demo Fallback.",
+      "rightsVerified": true,
+      "canonVerified": true,
+      "approvedJobIds": [
+        "job-scn-03a-1794648805578",
+        "job-scn-03b-1794648692623",
+        "job-scn-03a-1794648692391",
+        "job-scn-03b-1794648331591",
+        "job-scn-03a-1794648331515",
+        "job-scn03a-keyframe",
+        "job-scn03b-keyframe"
+      ],
+      "publishedAt": "2026-11-14T09:34:07.915Z",
+      "deterministicHash": "bf-audit-09946393",
+      "rightsSnapshotHash": "bf-audit-9e897466",
+      "assetHashes": {
+        "scene-01-arrival": "bf-asset-scn01-a18f9201",
+        "scene-02-decision": "bf-asset-scn02-c71b4012",
+        "scene-03a-broadcast": "bf-sha256-49670eed5f6a91e7",
+        "scene-03b-quarantine": "bf-sha256-7859e95c29f5668a"
+      },
+      "playbackMode": "STORYBOARD_DEMO"
+    },
+    {
+      "id": "pub-v4-1794648742798",
+      "titleId": "the-last-signal",
+      "versionNumber": 4,
+      "approvedBy": "Elena Rostova",
+      "role": "Executive Story & Rights Supervisor",
+      "notes": "Mission 02 E2E verified release: Live Gemini 4 Hydrogen Story DNA & Branch Proposal + Rights-as-Code + Canon DAG + Reviewed Storyboard Fallback Plates.",
+      "rightsVerified": true,
+      "canonVerified": true,
+      "approvedJobIds": [
+        "job-scn-03b-1794648692623",
+        "job-scn-03a-1794648692391",
+        "job-scn-03b-1794648331591",
+        "job-scn-03a-1794648331515",
+        "job-scn03a-keyframe",
+        "job-scn03b-keyframe"
+      ],
+      "publishedAt": "2026-11-14T09:32:22.798Z",
+      "deterministicHash": "bf-audit-09946393",
+      "rightsSnapshotHash": "bf-audit-9e897466",
+      "assetHashes": {
+        "scene-01-arrival": "bf-asset-scn01-a18f9201",
+        "scene-02-decision": "bf-asset-scn02-c71b4012",
+        "scene-03a-broadcast": "bf-sha256-fcf80065df0b620f",
+        "scene-03b-quarantine": "bf-sha256-7859e95c29f5668a"
+      },
+      "playbackMode": "STORYBOARD_DEMO"
+    },
+    {
+      "id": "pub-v3-initial",
+      "titleId": "the-last-signal",
+      "versionNumber": 3,
+      "approvedBy": "Elena Rostova",
+      "role": "Executive Story & Rights Supervisor",
+      "notes": "Initial controlled release of THE LAST SIGNAL: 1 consequential decision point (The Meridian Override) and 2 verified outcomes (Open Horizon Broadcast & Faraday Blackout). All performer likeness/voice grants and canon checks passed.",
+      "rightsVerified": true,
+      "canonVerified": true,
+      "approvedJobIds": [
+        "job-scn03a-keyframe",
+        "job-scn03b-keyframe"
+      ],
+      "publishedAt": "2026-11-14T00:15:00.000Z",
+      "deterministicHash": "bf-pub-7c91e4a2",
+      "rightsSnapshotHash": "bf-audit-9e897466",
+      "assetHashes": {
+        "scene-01-arrival": "bf-asset-scn01-a18f9201",
+        "scene-02-decision": "bf-asset-scn02-c71b4012",
+        "scene-03a-broadcast": "bf-asset-scn03a-e82c9104",
+        "scene-03b-quarantine": "bf-asset-scn03b-f09d3381"
+      },
+      "playbackMode": "STORYBOARD_DEMO"
+    }
+  ],
+  "geminiTraces": [
+    {
+      "operation": "FLASH_IMAGE_GENERATION",
+      "modelId": "gemini-3.1-flash-lite-image",
+      "endpoint": "/api/v1/generation/create",
+      "outcome": "LIVE_SUCCESS",
+      "provenance": "LIVE_GEMINI",
+      "latencyMs": 3163,
+      "schemaValid": true,
+      "validationSummary": "Generated 16:9 image asset (bf-sha256-49670eed5f6a91e7) for scene SCN-03A.",
+      "id": "trace-1794648808741-gf7s",
+      "timestamp": "2026-11-14T09:33:28.741Z"
+    },
+    {
+      "operation": "OMNI_VIDEO_GENERATION",
+      "modelId": "gemini-omni-1.2-flash",
+      "endpoint": "/api/v1/generation/create",
+      "outcome": "API_ERROR",
+      "provenance": "STORYBOARD_FALLBACK",
+      "latencyMs": 182,
+      "schemaValid": false,
+      "validationSummary": "Video API unavailable; preserved functional STORYBOARD DEMO plate.",
+      "sanitizedError": "404 Model 'gemini-omni-1.2-flash' not found. Please verify the model name against the supported list: https://ai.google.dev/gemini-api/docs/models",
+      "id": "trace-1794648692804-awjb",
+      "timestamp": "2026-11-14T09:31:32.804Z"
+    },
+    {
+      "operation": "OMNI_VIDEO_GENERATION",
+      "modelId": "gemini-omni-1.2-flash",
+      "endpoint": "/api/v1/generation/create",
+      "outcome": "API_ERROR",
+      "provenance": "STORYBOARD_FALLBACK",
+      "latencyMs": 223,
+      "schemaValid": false,
+      "validationSummary": "Video API unavailable; preserved functional STORYBOARD DEMO plate.",
+      "sanitizedError": "404 Model 'gemini-omni-1.2-flash' not found. Please verify the model name against the supported list: https://ai.google.dev/gemini-api/docs/models",
+      "id": "trace-1794648692613-8wl3",
+      "timestamp": "2026-11-14T09:31:32.613Z"
+    },
+    {
+      "operation": "OMNI_VIDEO_GENERATION",
+      "modelId": "gemini-omni-1.2-flash",
+      "endpoint": "/api/v1/generation/create",
+      "outcome": "API_ERROR",
+      "provenance": "STORYBOARD_FALLBACK",
+      "latencyMs": 63,
+      "schemaValid": false,
+      "validationSummary": "Video API unavailable; preserved functional STORYBOARD DEMO plate.",
+      "sanitizedError": "{\"error\":{\"code\":404,\"message\":\"Model is not found: models/gemini-omni-1.2-flash for api version v1\",\"status\":\"NOT_FOUND\"}}",
+      "id": "trace-1794648331654-wabt",
+      "timestamp": "2026-11-14T09:25:31.654Z"
+    },
+    {
+      "operation": "OMNI_VIDEO_GENERATION",
+      "modelId": "gemini-omni-1.2-flash",
+      "endpoint": "/api/v1/generation/create",
+      "outcome": "API_ERROR",
+      "provenance": "STORYBOARD_FALLBACK",
+      "latencyMs": 70,
+      "schemaValid": false,
+      "validationSummary": "Video API unavailable; preserved functional STORYBOARD DEMO plate.",
+      "sanitizedError": "{\"error\":{\"code\":404,\"message\":\"Model is not found: models/gemini-omni-1.2-flash for api version v1\",\"status\":\"NOT_FOUND\"}}",
+      "id": "trace-1794648331585-7jmj",
+      "timestamp": "2026-11-14T09:25:31.585Z"
+    },
+    {
+      "operation": "OMNI_VIDEO_GENERATION",
+      "modelId": "gemini-omni-1.2-flash",
+      "endpoint": "/api/v1/generation/create",
+      "outcome": "BLOCKED_RIGHTS",
+      "provenance": "LIVE_GEMINI",
+      "latencyMs": 0,
+      "schemaValid": false,
+      "validationSummary": "Blocked by Rights-as-Code: Dr. Elena Vance (Lead Cryptographer) (likeness) permission is DENY [BF-LIK-ELENA-2026].",
+      "id": "trace-1794648331496-y92i",
+      "timestamp": "2026-11-14T09:25:31.496Z"
+    },
+    {
+      "operation": "BRANCH_PLANNER",
+      "modelId": "gemini-4-hydrogen",
+      "endpoint": "/api/v1/planner/propose",
+      "outcome": "LIVE_SUCCESS",
+      "provenance": "LIVE_GEMINI",
+      "latencyMs": 15734,
+      "schemaValid": true,
+      "validationSummary": "BranchProposal v1.0.0 validated: \"Engage the Quantum Mirror Loop\" (4 causal consequences, 4 downstream event modifications).",
+      "id": "trace-1794648113151-8cak",
+      "timestamp": "2026-11-14T09:21:53.151Z"
+    },
+    {
+      "operation": "STORY_DNA_COMPILER",
+      "modelId": "gemini-4-hydrogen",
+      "endpoint": "/api/v1/compiler/analyze",
+      "outcome": "LIVE_SUCCESS",
+      "provenance": "LIVE_GEMINI",
+      "latencyMs": 16666,
+      "schemaValid": true,
+      "validationSummary": "StoryDNA v1.0.0 validated (2 chars, 6 facts, 4 events). Canon valid: true",
+      "id": "trace-1794648097409-sfc9",
+      "timestamp": "2026-11-14T09:21:37.409Z"
+    }
+  ]
+}

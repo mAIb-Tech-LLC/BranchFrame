@@ -1,0 +1,35 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --bf-midnight: #070912;
+    --bf-surface: #0D1120;
+    --bf-elevated: #13182B;
+    --bf-ivory: #F4F1E8;
+    --bf-muted: #9BA3B8;
+    --bf-violet: #755CFF;
+    --bf-cyan: #29DCEF;
+    --bf-coral: #FF617C;
+    --font-display: 'Outfit', sans-serif;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #070912;
+    color: #F4F1E8;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+
+  .font-mono, .tabular-nums {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
